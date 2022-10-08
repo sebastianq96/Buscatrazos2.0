@@ -508,7 +508,8 @@ header {
 
 /*---------------------------------Servicios--------------------------------------*/
 .servicios {
-    z-index: 0;
+    position: relative;
+    z-index: 1;
     margin-top: -4%;
     background: url('../img/bg-header1.jpg')  padding-box,
     linear-gradient(-135deg, var(--colordegradado1),var(--colordegradado2),var(--colordegradado3)) border-box;
@@ -517,7 +518,6 @@ header {
     border-bottom-left-radius: 10%;
     border-bottom-right-radius: 10%;
     border-bottom: 20px solid transparent;
-
 
 }
 
@@ -572,3 +572,79 @@ header {
     width: 100%;
     vertical-align: top;
 }
+
+/*------------------------------------------------------------------PORTAFOLIO-----------------------------------------------------------*/
+.portafolio {
+    z-index: 0;
+    margin-top: -8%;
+    background: url('../img/bg-quienes-somos.jpg')  padding-box,
+    linear-gradient(-135deg, var(--colordegradado1),var(--colordegradado2),var(--colordegradado3)) border-box;
+    background-size: cover;
+    width: 100%;    
+}
+
+.contenedor-portafolio{
+    width: 100%;
+    padding: 25vh 10vw 10vh 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-portafolio{
+    width: 20%;
+
+}
+
+.titulo-portafolio img{
+    vertical-align: top;
+    width: 100%;
+}
+
+.carousel {
+    position: relative;
+  }
+
+.carousel-container{
+    margin-top: 5vh;
+}
+  .carousel-item img {
+    object-fit: cover;
+  }
+  #carousel-thumbs {
+    background: rgba(255,255,255,.3);
+    bottom: 0;
+    left: 0;
+    padding: 0 50px;
+    right: 0;
+  }
+  #carousel-thumbs img {
+    border: 5px solid transparent;
+    cursor: pointer;
+  }
+  #carousel-thumbs img:hover {
+    border-color: rgba(255,255,255,.3);
+  }
+  #carousel-thumbs .selected img {
+    border-color: #fff;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+  }
+  @media all and (max-width: 767px) {
+    .carousel-container #carousel-thumbs img {
+      border-width: 3px;
+    }
+  }
+  @media all and (min-width: 576px) {
+    .carousel-container #carousel-thumbs {
+      position: absolute;
+    }
+  }
+  @media all and (max-width: 576px) {
+    .carousel-container #carousel-thumbs {
+      background: #ccccce;
+    }
+  }
