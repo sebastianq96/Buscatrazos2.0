@@ -20,6 +20,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
+    scroll-behavior: smooth;
 
 }
 
@@ -54,14 +55,6 @@ header {
     box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.5);
 }
 
-#selected {
-    background: var(--colorprincipal);
-    padding: 18px 40px;
-    border-radius: 50px;
-    color: #ffff;
-}
-
-
 .contenedor-header .logo-header {
     padding-top: 5px;
     width: 14%;
@@ -81,6 +74,8 @@ header {
 
 .contenedor-header .menu ul {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contenedor-header .menu ul li {
@@ -100,6 +95,20 @@ header {
     border-bottom: 4px solid var(--colorprincipal);
 
 }
+
+.selected {
+    margin-top: 1em;
+    background: var(--colorprincipal);
+    padding: 18px 40px;
+    border-radius: 50px;
+    color: #ffff !important;
+}
+
+.contenedor-header .menu ul .selected a{
+    color: #ffff ;
+}
+
+
 
 .main-cover {
     height: 1100px;
