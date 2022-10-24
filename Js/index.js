@@ -74,10 +74,13 @@ window.addEventListener('scroll', () => {
 
   if (window.scrollY > cpos && window.scrollY < dpos){
     btnServices.classList.remove('selected');
+    btnContact.classList.remove('selected');
     btnPorfolio.classList.add('selected');
+   
+
   }
 
-  if (window.scrollY > dpos){
+  if (window.scrollY >= dpos){
     btnPorfolio.classList.remove('selected');
     btnContact.classList.add('selected');
 
@@ -150,7 +153,7 @@ Array.prototype.forEach.call(dotElemsServices, (dotElem) => {
 
   }, time_valServices);
 });
-//------------------------------------
+
 
 
 
@@ -168,8 +171,6 @@ var p = 0;
 let resultado;
 var thumb = "";
 
-
-//carouselthumbs.innerHTML+="<a class='carousel-control-prev' href='#carousel-thumbs' role='button' data-slide='prev'><span class='carousel-control-prev-icon' aria-hidden='true'></span><span class='sr-only'>Previous</span></a><a class='carousel-control-next' href='#carousel-thumbs' role='button' data-slide='next'><span class='carousel-control-next-icon' aria-hidden='true'></span><span class='sr-only'>Next</span></a>";
 
 var miCallback = function (datos) {
   app.imagenes = datos;
