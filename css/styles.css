@@ -1258,3 +1258,337 @@ header {
   .o-footer-email{
   display: flex;
   }
+
+
+
+  /*============================================================RESPONSIVE =========================================================================================================*/
+  @media only screen and (max-width: 1024px){
+
+/*----------------------------HEADER---------------------------------*/
+
+  header {
+    height: 60px;
+  }
+
+  .contenedor-header {
+    padding: 0 5em;
+  }
+
+  .contenedor-header .logo-header {
+    padding-top: .5vw;
+    width: 15%;
+  }
+
+
+  .contenedor-header .menu ul li {
+    margin-left: 10px;
+  }
+
+  .contenedor-header .menu ul li a {
+    font-size: 1.7vw;
+  }
+
+  .selected {
+    margin-top: .5em;
+    padding: 10px 40px;
+  }
+
+  .main-cover {
+    height: 700px;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+  }
+  
+  
+  .contenedor-cover {
+    height: 700px;
+
+  }
+  
+  .contenedor-cover .svg .Logo {
+    width: 450px;
+  }
+  
+  .contenedor-cover .svg .Logo2 {
+      width: 1100px;
+      margin-top: -250px;
+      margin-left: -350px;
+  }
+  
+
+/*------------------------QUIENES SOMOS--------------------------------------*/
+.quienes-somos {
+  margin-top: -10%;
+}
+
+.quienes-somos .contenedor-imagen {
+  width: 40%;
+}
+
+/*----------------------------------------------SLIDES QUIENES SOMOS-------------------------------------------------------------------------------------------------*/
+.quienes-somos .contenedor-texto {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  padding: 10% 8% 10% 8%;
+}
+
+
+.slide_tittle {
+  font-size: 1vw;
+  width: 70%;
+  padding: 1vh 1vh 1vh 2vh;
+
+}
+
+.slide_text {
+  font-size: 1.8vw;
+  width: 80%;
+  padding: 1vh 0vh 0vh 0vh;
+}
+
+.slide_text .slogan {
+  font-size: 1.9vw;
+}
+
+.slide_text ul {
+  margin-top: 1vh;
+  column-count: 2;
+}
+
+
+
+/*-----------------------------Banner-Servicios------------------------------------*/
+
+.banner-servicios {
+  height: 600px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+
+}
+
+
+/*---------------------------------Slider Servicios------------------------------*/
+
+.slider__slidesServices {
+  width: 450%;
+  height: 100%;
+}
+
+.sliderServices p {
+  font-size: 4vw;
+  padding-left: 8vw;
+}
+
+.slide_image {
+  padding-left: 4em;
+}
+
+/*----------------------------------Whatsapp Servicios----------------------------*/
+.whatsapp-servicios{
+  margin-top: 5em;
+}
+
+.contenedor-whatsapp-servicios{
+  font-size: 2.4vw;
+}
+
+.contenedor-whatsapp-servicios:hover >.whatsapp-logo-servicios{
+  width: 19%;
+}
+
+.whatsapp-logo-servicios{
+  width: 18%;
+}
+
+.contenedor-whatsapp-servicios p {
+  padding: 1.5vh 4vw;
+
+}
+
+/*---------------------------------Servicios--------------------------------------*/
+.servicios {
+  margin-top: -5%;
+  border-bottom-left-radius: 8%;
+  border-bottom-right-radius: 8%;
+}
+
+.contenedor-servicios:after {
+  left: 10%;
+  right: 10%;
+  border-bottom: .6vh solid;
+}
+
+.contenedor-servicios .servicio {
+  font-size: 2.5vw;
+}
+
+.contenedor-servicios .servicio h3 {
+  border-top: 5px solid transparent;
+  font-size: 3vw;
+}
+
+
+/*--------------------------------------------------------------Portafolio-----------------------------------------------------------*/
+.portafolio {
+  margin-top: -15%;   
+}
+
+.contenedor-portafolio-videos{
+  height: 400px;
+  border-top-left-radius: 12%;
+  border-top-right-radius: 12%;
+}
+   
+/*-----------------------------------------------------------------Contactanos-----------------------------------------------------*/
+
+  .contacto {
+    margin-top: -5%;
+    border-top-left-radius: 8%;
+    border-top-right-radius: 8%;
+}
+
+/*---------------------------------------Form-----------------------------------------------------------------------------*/
+
+  .contenedor-formulario h3{
+    margin-top: 2vh;
+    margin-bottom: 15vh;
+   
+  }
+
+  /*-----------------------------------------------------REDES SOCIALES------------------------------------------------------------------------------------------*/
+  
+    .redes-sociales{
+      margin-top: -6%;
+      height: 55vh;
+      border-top-left-radius: 8%;
+      border-top-right-radius: 8%;
+    }
+
+    .whatsapp{
+    width: 45%;
+    }
+
+    .contenedor-whatsapp{
+    padding: 2vh;
+    }
+
+    .contenedor-whatsapp .whatsapp-logo{
+    width: 35%;
+    margin-right: .5vw;
+    }
+
+    .contenedor-whatsapp p {
+    width: 65%;
+    padding: 1vh 2.5vw;
+    }
+
+    
+    .separador-puntos{
+    margin-top: 4vh;
+    }
+
+    .socialmedia{
+    width: 40%;
+    margin-top: 1vh;
+    }
+
+    .socialmedia h3{
+    width: 70%;
+    padding: 1vh 4vh 1vh 1vh;
+    border-top: 6px solid transparent;
+    }
+
+    .socialmedia .contenedor-socialmedia a svg{
+    width: 15%;
+    }
+
+    .socialmedia .contenedor-socialmedia a svg:hover{
+    width: 16%;
+    }
+ 
+/*-----------------------------------------------------------Footer---------------------------------------------------------------------------------------------------------------*/ 
+  .o-logo{
+    width: 100%;
+    justify-content: center;
+  }
+    .o-logo img{
+      width: 50%;
+      margin-bottom: 2vh;
+    }
+    
+    .o-contact-slogan{
+      width: 100%;
+      text-align: center;
+    }
+
+    .o-contact-tittle{
+      width: 100%;
+      justify-content: center;
+      border-left: none;
+      margin-top: 2vh;
+    }
+    .o-content-dots{
+      justify-content: center;
+    }
+
+    .dot{
+      width: 3vw;
+      height: 3vw;
+      margin-left: 2vw;
+      border-radius: 50%; 
+    }
+
+    .o-contact-qr{
+      width: 100%;
+      justify-content: center;
+      margin: 2vh;
+    }
+
+    .o-circle-qr{
+      width: 30vw;
+      height: 30vw;
+      padding: .3vw;
+    }
+    
+    .o-circle{
+      width: 30vw;
+      height: 30vw;
+    }
+    
+    .o-circle img{
+      width: 65%;
+    }
+    .o-social-content{
+      padding: 0 4vh;
+    }
+    .o-social-content svg {
+      width: 3vh;
+      margin: 1vh;
+    }
+    .o-social-text{
+      font-size: 2vh;
+      text-align: center;
+    }
+
+    .o-contact-tittle h2{
+      font-size: 4vh;
+      margin-top: 2vh;
+      margin-left: 4vw;
+    }
+
+    .o-footer{
+      width: 100%;
+      padding:2vh;
+      position: relative;
+      text-align: center;
+      padding-top: 2vh;
+      justify-content: center;
+    }
+
+    .o-footer-email{
+      margin-left: .5vh;
+      }
+}

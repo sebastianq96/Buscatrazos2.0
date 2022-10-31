@@ -32,7 +32,14 @@ const btnServices= document.getElementById('btn-services');
 const btnPorfolio= document.getElementById('btn-porfolio');
 const btnContact= document.getElementById('btn-contact');
 
+btnAboutUs.classList.remove('selected');
+btnPorfolio.classList.remove('selected');
+btnServices.classList.remove('selected');
+btnContact.classList.remove('selected');
+
 window.addEventListener('scroll', () => {
+
+
 
   if (window.scrollY >= 60) {
     nav.classList.add("navbar-color");
@@ -55,24 +62,24 @@ window.addEventListener('scroll', () => {
   let dpos= d.offsetTop; 
 
 
-  if(window.scrollY < apos){
+  if(window.scrollY < apos-10){
     btnAboutUs.classList.remove('selected');
   }
 
-  if (window.scrollY > apos && window.scrollY < bpos){
+  if (window.scrollY > apos-10 && window.scrollY < bpos-10){
     btnAboutUs.classList.add('selected');
     btnServices.classList.remove('selected');
   }
 
   
-  if (window.scrollY > bpos && window.scrollY < cpos){
+  if (window.scrollY > bpos-10 && window.scrollY < cpos-10){
     btnAboutUs.classList.remove('selected');
     btnPorfolio.classList.remove('selected');
     btnServices.classList.add('selected');
     console.log("entre a servicios")
   }
 
-  if (window.scrollY > cpos && window.scrollY < dpos){
+  if (window.scrollY > cpos-10 && window.scrollY < dpos-10){
     btnServices.classList.remove('selected');
     btnContact.classList.remove('selected');
     btnPorfolio.classList.add('selected');
@@ -80,7 +87,7 @@ window.addEventListener('scroll', () => {
 
   }
 
-  if (window.scrollY >= dpos){
+  if (window.scrollY >= dpos-10){
     btnPorfolio.classList.remove('selected');
     btnContact.classList.add('selected');
 
