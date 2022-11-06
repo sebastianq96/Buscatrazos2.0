@@ -61,35 +61,35 @@ header {
   box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.5);
 }
 
-.contenedor-header .logo-header {
+.logo-header {
   padding-top: 5px;
   width: 14%;
   opacity: 0;
 
 }
 
-.contenedor-header .logo-header img {
+.logo-header img {
   width: 100%;
   vertical-align: top;
 }
 
-.contenedor-header .menu {
+.menu {
   display: flex;
   align-items: center;
 }
 
-.contenedor-header .menu ul {
+.menu ul {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contenedor-header .menu ul li {
+.menu ul li {
   list-style: none;
   margin-left: 36px;
 }
 
-.contenedor-header .menu ul li a {
+.menu ul li a {
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
@@ -97,7 +97,7 @@ header {
   text-transform: uppercase;
 }
 
-.contenedor-header .menu ul li a:hover {
+.menu ul li a:hover {
   border-bottom: 4px solid var(--colorprincipal);
 
 }
@@ -110,10 +110,101 @@ header {
   color: #ffff !important;
 }
 
-.contenedor-header .menu ul .selected a {
+.menu ul .selected a {
   color: #ffff;
 }
 
+
+/*-----------------------menu hamburguesa--------------------------------------------*/
+.bars__menu{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top:50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  display: none;
+}
+
+.bars__menu span{
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--colorprincipal);
+  margin-top: 6px;
+  transform-origin: 0px 100%;
+  transition: all 300ms;
+}
+
+.activeline1__bars-menu{
+  transform: rotate(45deg) translate(-2px, 1px);
+  background: var(--colorTittle) !important;
+}
+
+.activeline2__bars-menu{
+  opacity: 0;
+  margin-left: -30px;
+}
+
+.activeline3__bars-menu{
+  transform: rotate(-45deg) translate(-4px, 2px);
+  background: var(--colorTittle) !important;
+}
+
+
+.contenedor-header-mobile{
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 100vh;
+  margin: 0px;
+  padding: 0em 0em;
+}
+
+.logo-header-mobile{
+  background-color: var(--colorheader);
+}
+
+.menu__active{
+  display: block;
+  background-color: var(--colorheader);
+  box-shadow: 15px 0px 15px -15px #111;  
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.menu__active ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+}
+
+
+.menu__active ul li {
+  list-style: none;
+  margin-top: 2vh;
+  text-align: center;
+}
+
+.menu__active ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--colorprincipal);
+  text-transform: uppercase;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------*/
 
 
 .main-cover {
@@ -1337,11 +1428,11 @@ textarea.input1+.shadow-input1 {
   }
 
 
-  .contenedor-header .menu ul li {
+  .menu ul li {
     margin-left: 10px;
   }
 
-  .contenedor-header .menu ul li a {
+  .menu ul li a {
     font-size: 1.7vw;
   }
 
@@ -1524,7 +1615,7 @@ textarea.input1+.shadow-input1 {
     border-top-right-radius: 8%;
   }
 
-  .  .whatsapp {
+ .whatsapp {
     width: 40%;
   }
 
@@ -1563,95 +1654,7 @@ textarea.input1+.shadow-input1 {
 
   .socialmedia .contenedor-socialmedia a svg:hover {
     width: 16%;
-  }
-
-  /*-----------------------------------------------------------Footer---------------------------------------------------------------------------------------------------------------*/
-  .o-logo {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .o-logo img {
-    width: 50%;
-    margin-bottom: 2vh;
-  }
-
-  .o-contact-slogan {
-    width: 100%;
-    text-align: center;
-  }
-
-  .o-contact-tittle {
-    width: 100%;
-    justify-content: center;
-    border-left: none;
-    margin-top: 2vh;
-  }
-
-  .o-content-dots {
-    justify-content: center;
-  }
-
-  .dot {
-    width: 3vw;
-    height: 3vw;
-    margin-left: 2vw;
-    border-radius: 50%;
-  }
-
-  .o-contact-qr {
-    width: 100%;
-    justify-content: center;
-    margin: 2vh;
-  }
-
-  .o-circle-qr {
-    width: 30vw;
-    height: 30vw;
-    padding: .3vw;
-  }
-
-  .o-circle {
-    width: 30vw;
-    height: 30vw;
-  }
-
-  .o-circle img {
-    width: 65%;
-  }
-
-  .o-social-content {
-    padding: 0 4vh;
-  }
-
-  .o-social-content svg {
-    width: 3vh;
-    margin: 1vh;
-  }
-
-  .o-social-text {
-    font-size: 2vh;
-    text-align: center;
-  }
-
-  .o-contact-tittle h2 {
-    font-size: 4vh;
-    margin-top: 2vh;
-    margin-left: 4vw;
-  }
-
-  .o-footer {
-    width: 100%;
-    padding: 2vh;
-    position: relative;
-    text-align: center;
-    padding-top: 2vh;
-    justify-content: center;
-  }
-
-  .o-footer-email {
-    margin-left: .5vh;
-  }
+  } 
 }
 
 
@@ -1667,17 +1670,17 @@ textarea.input1+.shadow-input1 {
     padding: 0 5em;
   }
 
-  .contenedor-header .logo-header {
+.logo-header {
     padding-top: .5vw;
     width: 12%;
   }
 
 
-  .contenedor-header .menu ul li {
+.menu ul li {
     margin-left: 40px;
   }
 
-  .contenedor-header .menu ul li a {
+.menu ul li a {
     font-size: 1.4vw;
   }
 
@@ -1907,11 +1910,11 @@ textarea.input1+.shadow-input1 {
   }
 
 
-  .contenedor-header .menu ul li {
+.menu ul li {
     margin-left: 40px;
   }
 
-  .contenedor-header .menu ul li a {
+.menu ul li a {
     font-size: 1.4vw;
   }
 
@@ -2125,3 +2128,1266 @@ textarea.input1+.shadow-input1 {
     column-count: 2;
   }
 }
+
+
+/*============================================================RESPONSIVE MOBILE=========================================================================================================*/
+@media only screen and (min-width:934px) and (max-width:1023px){
+    /*----------------------------HEADER---------------------------------*/
+
+    header {
+      height: 70px;
+    }
+  
+    .contenedor-header {
+      padding: 0em 0em;
+    }
+
+    .menu ul li {
+      display: none;
+    }
+
+    .menu__active ul li {
+      display: block;
+    }
+  
+    .logo-header {
+      padding: 1vw 5em;
+      width: 50%;
+      opacity: 1;
+    }
+
+    .logo-header img {
+      width: 50%;
+    }
+
+    .bars__menu{
+      display: block;
+    }
+  
+    
+    .selected {
+      margin-top: .5em;
+      padding: 10px 15px;
+    }
+  
+    .main-cover {
+      height: 700px;
+      border-bottom-left-radius: 10%;
+      border-bottom-right-radius: 10%;
+    }
+  
+  
+    .contenedor-cover {
+      height: 700px;
+  
+    }
+  
+    .contenedor-cover .svg .Logo {
+      width: 450px;
+    }
+  
+    .contenedor-cover .svg .Logo2 {
+      width: 900px;
+      margin-top: -150px;
+      margin-left: -250px;
+    }
+  
+
+  /*------------------------QUIENES SOMOS--------------------------------------*/
+  .quienes-somos {
+    margin-top: -10%;
+  }
+
+  .quienes-somos .contenedor-imagen {
+    width: 40%;
+  }
+
+
+  /*----------------------------------------------SLIDES QUIENES SOMOS-------------------------------------------------------------------------------------------------*/
+  .quienes-somos .contenedor-texto {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 10% 8% 18% 8%;
+  }
+
+  .slider__dots {
+    bottom: 0em;
+  }
+
+  .slide_tittle {
+    font-size: 1vw;
+    width: 70%;
+    padding: 1vh 1vh 1vh 2vh;
+
+  }
+
+  .slide_text {
+    font-size: 1.8vw;
+    width: 80%;
+    padding: 1vh 2vh 0vh 2vh;
+  }
+
+  .slide_text .slogan {
+    font-size: 1.9vw;
+  }
+
+  .slide_text ul {
+    margin-top: 1vh;
+    column-count: 2;
+  }
+
+
+  /*-----------------------------Banner-Servicios------------------------------------*/
+
+  .banner-servicios {
+    height: 500px;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+
+  }
+
+
+  /*---------------------------------Slider Servicios------------------------------*/
+
+  .slider__slidesServices {
+    width: 450%;
+    height: 100%;
+  }
+
+  .sliderServices p {
+    font-size: 3vw;
+    padding-left: 4vw;
+  }
+
+  .slide_image {
+    padding-left: 4em;
+  }
+
+
+  /*--Whatsapp Servicios----------------------------*/
+  .whatsapp-servicios {
+    margin-top: 4em;
+  }
+
+  .contenedor-whatsapp-servicios {
+    font-size: 2.4vw;
+  }
+
+  .contenedor-whatsapp-servicios:hover>.whatsapp-logo-servicios {
+    width: 19%;
+  }
+
+  .whatsapp-logo-servicios {
+    width: 18%;
+  }
+
+  .contenedor-whatsapp-servicios p {
+    padding: 1.5vh 4vw;
+
+  }
+
+  .servicios {
+    margin-top: -5%;
+    border-bottom-left-radius: 8%;
+    border-bottom-right-radius: 8%;
+  }
+
+  .contenedor-servicios:after {
+    left: 10%;
+    right: 10%;
+    border-bottom: .6vh solid;
+  }
+
+  .contenedor-servicios .servicio {
+    font-size: 2vw;
+  }
+
+  .contenedor-servicios .servicio h3 {
+    border-top: 5px solid transparent;
+    font-size: 2.5vw;
+  }
+
+
+  .portafolio {
+    margin-top: -15%;
+  }
+
+  .contenedor-portafolio-videos {
+    height: 300px;
+    border-top-left-radius: 12%;
+    border-top-right-radius: 12%;
+  }
+
+  /*-----------------------------------------------------REDES SOCIALES------------------------------------------------------------------------------------------*/
+
+  .redes-sociales {
+    margin-top: -6%;
+    height: 55vh;
+    border-top-left-radius: 8%;
+    border-top-right-radius: 8%;
+  }
+
+  .whatsapp {
+    width: 40%;
+  }
+
+  .contenedor-whatsapp {
+    padding: 1vh;
+  }
+
+  .contenedor-whatsapp .whatsapp-logo {
+    width: 20%;
+    margin-right: .5vw;
+  }
+
+  .contenedor-whatsapp p {
+    font-size: 3vw;
+    width: 60%;
+    padding: .5vh 2.5vw;
+  }
+
+
+  .separador-puntos {
+    margin-top: 4vh;
+  }
+
+  .socialmedia {
+    width: 40%;
+    margin-top: 1vh;
+  }
+
+  .socialmedia h3 {
+    width: 70%;
+    padding: 1vh 4vh 1vh 1vh;
+    border-top: 6px solid transparent;
+    font-size: 3vw;
+  }
+
+  .socialmedia .contenedor-socialmedia a svg {
+    width: 12%;
+  }
+
+  .socialmedia .contenedor-socialmedia a svg:hover {
+    width: 14%;
+  }
+/*-----------------------------------------------------------Footer---------------------------------------------------------------------------------------------------------------*/
+.o-logo {
+  width: 100%;
+  justify-content: center;
+}
+
+.o-logo img {
+  width: 50%;
+  margin-bottom: 2vh;
+}
+
+.o-contact-slogan {
+  width: 100%;
+  text-align: center;
+}
+
+.o-contact-tittle {
+  width: 100%;
+  justify-content: center;
+  border-left: none;
+  margin-top: 2vh;
+}
+
+.o-content-dots {
+  justify-content: center;
+}
+
+.dot {
+  width: 3vw;
+  height: 3vw;
+  margin-left: 2vw;
+  border-radius: 50%;
+}
+
+.o-contact-qr {
+  width: 100%;
+  justify-content: center;
+  margin: 2vh;
+}
+
+.o-circle-qr {
+  width: 30vw;
+  height: 30vw;
+  padding: .3vw;
+}
+
+.o-circle {
+  width: 30vw;
+  height: 30vw;
+}
+
+.o-circle img {
+  width: 65%;
+}
+
+.o-social-content {
+  padding: 0 4vh;
+}
+
+.o-social-content svg {
+  width: 3vh;
+  margin: 1vh;
+}
+
+.o-social-text {
+  font-size: 2vh;
+  text-align: center;
+}
+
+.o-contact-tittle h2 {
+  font-size: 4vh;
+  margin-top: 2vh;
+  margin-left: 4vw;
+}
+
+.o-footer {
+  width: 100%;
+  padding: 2vh;
+  position: relative;
+  text-align: center;
+  padding-top: 2vh;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.o-footer-email {
+  margin-left: 5vh;
+}
+}
+
+
+@media only screen and (max-width:933px){
+/*----------------------------HEADER---------------------------------*/
+
+header {
+  height: 70px;
+}
+
+.contenedor-header {
+  padding: 0em 0em;
+}
+
+.menu ul li {
+  display: none;
+}
+
+.menu__active ul li {
+  display: block;
+}
+
+.logo-header {
+  padding: 1vw 5em;
+  width: 50%;
+  opacity: 1;
+}
+
+.logo-header img {
+  width: 50%;
+}
+
+.bars__menu{
+  display: block;
+}
+
+
+.selected {
+  margin-top: .5em;
+  padding: 10px 15px;
+}
+
+.main-cover {
+  height: 700px;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+
+
+.contenedor-cover {
+  height: 700px;
+
+}
+
+.contenedor-cover .svg .Logo {
+  width: 450px;
+}
+
+.contenedor-cover .svg .Logo2 {
+  width: 900px;
+  margin-top: -150px;
+  margin-left: -250px;
+}
+
+
+/*------------------------QUIENES SOMOS--------------------------------------*/
+.quienes-somos {
+margin-top: -10%;
+}
+
+.quienes-somos .contenedor-imagen {
+width: 40%;
+}
+
+
+/*----------------------------------------------SLIDES QUIENES SOMOS-------------------------------------------------------------------------------------------------*/
+.quienes-somos .contenedor-texto {
+display: flex;
+flex-wrap: wrap;
+width: 70%;
+padding: 10% 8% 18% 8%;
+}
+
+.slider__dots {
+bottom: 0em;
+}
+
+.slide_tittle {
+font-size: 1vw;
+width: 70%;
+padding: 1vh 1vh 1vh 2vh;
+
+}
+
+.slide_text {
+font-size: 1.8vw;
+width: 80%;
+padding: 1vh 2vh 0vh 2vh;
+}
+
+.slide_text .slogan {
+font-size: 1.9vw;
+}
+
+.slide_text ul {
+margin-top: 1vh;
+column-count: 2;
+}
+
+
+/*-----------------------------Banner-Servicios------------------------------------*/
+
+.banner-servicios {
+height: 500px;
+border-top-left-radius: 10%;
+border-top-right-radius: 10%;
+border-bottom-left-radius: 10%;
+border-bottom-right-radius: 10%;
+
+}
+
+
+/*---------------------------------Slider Servicios------------------------------*/
+
+.slider__slidesServices {
+width: 450%;
+height: 100%;
+}
+
+.sliderServices p {
+font-size: 3vw;
+padding-left: 4vw;
+}
+
+.slide_image {
+padding-left: 4em;
+}
+
+
+/*--Whatsapp Servicios----------------------------*/
+.whatsapp-servicios {
+margin-top: 4em;
+
+}
+
+.contenedor-whatsapp-servicios {
+font-size: 2.4vw;
+}
+
+.contenedor-whatsapp-servicios:hover>.whatsapp-logo-servicios {
+width: 19%;
+}
+
+.whatsapp-logo-servicios {
+width: 18%;
+}
+
+.contenedor-whatsapp-servicios p {
+padding: 1.5vh 4vw;
+
+}
+
+.servicios {
+margin-top: -5%;
+border-bottom-left-radius: 8%;
+border-bottom-right-radius: 8%;
+
+}
+
+.contenedor-servicios{
+  display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+}
+
+.contenedor-servicios:after {
+left: 10%;
+right: 10%;
+border-bottom: .6vh solid;
+}
+
+.contenedor-servicios .servicio {
+font-size: 2vw;
+}
+
+.contenedor-servicios .servicio h3 {
+border-top: 5px solid transparent;
+font-size: 2.5vw;
+}
+
+
+.portafolio {
+margin-top: -15%;
+}
+
+.contenedor-portafolio-videos {
+height: 300px;
+border-top-left-radius: 12%;
+border-top-right-radius: 12%;
+}
+
+/*-----------------------------------------------------REDES SOCIALES------------------------------------------------------------------------------------------*/
+
+.redes-sociales {
+margin-top: -6%;
+height: 55vh;
+border-top-left-radius: 8%;
+border-top-right-radius: 8%;
+}
+
+.whatsapp {
+width: 40%;
+}
+
+.contenedor-whatsapp {
+padding: 1vh;
+}
+
+.contenedor-whatsapp .whatsapp-logo {
+width: 20%;
+margin-right: .5vw;
+}
+
+.contenedor-whatsapp p {
+font-size: 3vw;
+width: 60%;
+padding: .5vh 2.5vw;
+}
+
+
+.separador-puntos {
+margin-top: 4vh;
+}
+
+.socialmedia {
+width: 40%;
+margin-top: 1vh;
+}
+
+.socialmedia h3 {
+width: 70%;
+padding: 1vh 4vh 1vh 1vh;
+border-top: 6px solid transparent;
+font-size: 3vw;
+}
+
+.socialmedia .contenedor-socialmedia a svg {
+width: 12%;
+}
+
+.socialmedia .contenedor-socialmedia a svg:hover {
+width: 14%;
+}
+/*-----------------------------------------------------------Footer---------------------------------------------------------------------------------------------------------------*/
+.o-logo {
+width: 100%;
+justify-content: center;
+}
+
+.o-logo img {
+width: 50%;
+margin-bottom: 2vh;
+}
+
+.o-contact-slogan {
+width: 100%;
+text-align: center;
+}
+
+.o-contact-tittle {
+width: 100%;
+justify-content: center;
+border-left: none;
+margin-top: 2vh;
+}
+
+.o-content-dots {
+justify-content: center;
+}
+
+.dot {
+width: 3vw;
+height: 3vw;
+margin-left: 2vw;
+border-radius: 50%;
+}
+
+.o-contact-qr {
+width: 100%;
+justify-content: center;
+margin: 2vh;
+}
+
+.o-circle-qr {
+width: 30vw;
+height: 30vw;
+padding: .3vw;
+}
+
+.o-circle {
+width: 30vw;
+height: 30vw;
+}
+
+.o-circle img {
+width: 65%;
+}
+
+.o-social-content {
+padding: 0 4vh;
+}
+
+.o-social-content svg {
+width: 3vh;
+margin: 1vh;
+}
+
+.o-social-text {
+font-size: 2vh;
+text-align: center;
+}
+
+.o-contact-tittle h2 {
+font-size: 4vh;
+margin-top: 2vh;
+margin-left: 4vw;
+}
+
+.o-footer {
+width: 100%;
+padding: 2vh;
+position: relative;
+text-align: center;
+padding-top: 2vh;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.o-footer-email {
+margin-left: 5vh;
+}
+}
+
+
+@media only screen and (max-width:913px){
+  
+
+/*------------------------QUIENES SOMOS--------------------------------------*/
+.quienes-somos {
+  margin-top: -10%;
+  }
+  
+  .quienes-somos .contenedor-imagen {
+  width: 40%;
+  }
+  
+  
+  /*----------------------------------------------SLIDES QUIENES SOMOS-------------------------------------------------------------------------------------------------*/
+  .quienes-somos .contenedor-texto {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  padding: 10% 8% 18% 8%;
+  }
+  
+  .slider__dots {
+  bottom: 0em;
+  }
+  
+  .slide_tittle {
+  font-size: 1vw;
+  width: 70%;
+  padding: 1vh 1vh 1vh 2vh;
+  
+  }
+  
+  .slide_text {
+  font-size: 1.8vw;
+  width: 80%;
+  padding: 1vh 2vh 0vh 2vh;
+  }
+  
+  .slide_text .slogan {
+  font-size: 1.9vw;
+  }
+  
+  .slide_text ul {
+  margin-top: 1vh;
+  column-count: 2;
+  }
+  
+
+}
+
+
+@media only screen and (max-width:855px){
+  .quienes-somos {
+    margin-top: -10%;
+    }
+    
+    .quienes-somos .contenedor-imagen {
+    width: 46%;
+    }
+    
+    
+    /*----------------------------------------------SLIDES QUIENES SOMOS-------------------------------------------------------------------------------------------------*/
+    .quienes-somos .contenedor-texto {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 10% 8% 18% 8%;
+    }
+    
+    .slider__dots {
+    bottom: 0em;
+    }
+    
+    .slide_tittle {
+    font-size: 1vw;
+    width: 70%;
+    padding: 1vh 1vh 1vh 2vh;
+    
+    }
+    
+    .slide_text {
+    font-size: 1.8vw;
+    width: 80%;
+    padding: 1vh 2vh 0vh 2vh;
+    }
+    
+    .slide_text .slogan {
+    font-size: 1.9vw;
+    }
+    
+    .slide_text ul {
+    margin-top: 1vh;
+    column-count: 2;
+    }
+
+    .contact1-form{
+      width: 90%;
+     }
+}
+
+
+@media only screen and (max-width:722px){
+
+  /*--------------------------------------------HEADER------------------------------------------------------------------*/
+
+  .logo-header {
+    padding: 1vw 3em;
+    width: 50%;
+    opacity: 1;
+  }
+
+  /*------------------------------------------QUIENES SOMOS---------------------------------------------------------------*/
+
+  .quienes-somos {
+    margin-top: -10%;
+    }
+    
+  .quienes-somos .contenedor-imagen {
+    width: 46%;
+    margin-left: -2vh;
+    }
+
+  .slide_tittle {
+    width: 80%;
+    padding: 1vh;
+    
+    }
+
+  .slide_tittle h2{
+    font-size: 3vh;
+  }
+
+  .contenedor-texto{
+    width: 80%;
+    font-size: 1vh;
+  }
+
+  .o-content-text .slide_text {
+    font-size: 2vw;
+    width: 85%;
+    padding: 1vh 1vh 0vh 1vh;
+    }
+
+  /*-----------------------------Banner-Servicios------------------------------------*/
+
+.banner-servicios {
+  height: 440px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  
+  }
+
+
+  .servicios {
+    margin-top: -5%;
+    border-bottom-left-radius: 8%;
+    border-bottom-right-radius: 8%;
+  }
+
+  .contenedor-servicios .servicio{
+    font-size: 2.1vh;
+  }
+
+
+  .contenedor-servicios{
+    flex-wrap: wrap;
+  }
+
+
+/*--------------------------------Contacto----------------------------------------------------------*/
+.contacto .contenedor-texto{
+  margin: auto;
+  margin-top: 5vw;
+}
+  .contacto .contenedor-texto h3{
+   font-size: 8vw;
+  }
+
+  .contacto .contenedor-texto h4{
+    font-size: 3.5vw;
+   }
+
+   .contact1-form{
+    width: 90%;
+   }
+
+   .contact1-form-btn{
+    min-width: 70vw;
+  }
+
+  .contenedor-formulario h3{
+    font-size: 4vw;
+  }
+  
+}
+
+
+@media only screen and (max-width:700px){
+  .logo-header{
+    width: 60%;
+  }
+
+  .menu__active{
+    width: 60%;
+  }
+
+  .logo-header img {
+    width: 40%;
+    margin-top: 1vh;
+  }
+
+  .contenedor-cover .svg .Logo {
+    width: 350px;
+  }
+
+  .contenedor-cover .svg .Logo2 {
+    width: 650px;
+    margin-top: -150px;
+    margin-left: -200px;
+  }
+
+  /*---------------------------------Slider Servicios------------------------------*/
+
+  .sliderServices p {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  font-size: 4vw;
+  padding: 2vh;
+  }
+  
+  .slide_image {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 2vh;
+  }
+  
+  .banner-servicios{
+    background-position: 25%;
+  }
+
+  /*------------------Portafolio--------------------------------------------------------*/
+  .titulo-portafolio{
+    width: 40%;
+  }
+
+  .logo-portafolio{
+    width: 50%;
+  }
+}
+
+
+@media only screen and (max-width:662px){
+/*----------------------------------Quienes somos --------------------------------*/
+.quienes-somos{
+  justify-content: center;
+  align-content: center;
+  flex-direction: column-reverse;
+  padding-top: 10vh;
+  margin-top: -10vh;
+}
+
+.quienes-somos .contenedor-imagen{
+  width: 60%;
+  margin-bottom: -8vh;
+}
+
+.quienes-somos .contenedor-texto{
+  width: 100%;
+  font-size: 2vw;
+  
+}
+
+.quienes-somos .contenedor-texto .slide_text{
+  padding: 1vw;
+  font-size: 3vw;
+}
+
+.slide_text .slogan{
+  font-size: 4vw;
+}
+
+.quienes-somos .contenedor-texto .slide_text ul{
+  padding: 5vw;
+}
+
+
+/*-----------------------------------------Servicios-----------------------------------------------------------------------------*/
+.banner-servicios{
+  background-position: 25%;
+}
+}
+
+@media only screen and (max-width:614px){
+  /*----------------------------SERVICIOS------------------------------------------------------------------------------------------*/
+  .servicios{
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+  }
+ .contenedor-servicios{
+  flex-direction: column-reverse;
+ }
+
+ .contenedor-servicios:nth-child(2){
+  flex-direction: column;
+ }
+
+ .contenedor-servicios .imagen-servicio{
+  width: 100%;
+ }
+
+ .contenedor-servicios .servicio{
+  width: 100%;
+  font-size: 5vw;
+ }
+
+ .contenedor-servicios .servicio h3{
+  font-size: 5vw;
+ }
+
+ .banner-servicios{
+  background-position: 30%;
+}
+}
+
+@media only screen and (max-width:548px){
+  .logo-header img {
+    width: 70%;
+    margin-top: 1vh;
+  }
+
+  
+  /*---------------------------------REDES SOCIALES----------------------------------------------------------------------------*/
+
+  .redes-sociales{
+    margin-top: -15%;
+    width: 100%;
+    height: 70vh;
+    flex-direction: column;
+    background: url('../img/bg-socialmedia.jpg') padding-box,
+    linear-gradient(-135deg, var(--colordegradado1), var(--colordegradado2), var(--colordegradado3)) border-box;
+    background-size: auto;
+    border-top-left-radius: 8%;
+    border-top-right-radius: 8%;
+    align-content: center;
+
+  }
+
+  .whatsapp{
+    width: 100%;
+  }
+
+  .contenedor-whatsapp p{
+    font-size: 5vw;
+    padding: 2vh 4vw;
+  }
+
+  .separador-puntos{
+    width: 100%;
+  }
+
+  .socialmedia{
+    width: 100%;
+    margin-top: 4vh;
+  }
+
+  .socialmedia h3{
+  
+    font-size: 6vw;
+  }
+
+}
+
+@media only screen and (max-width:470px){
+  .logo-header img {
+    width: 70%;
+    margin-top: 1vh;
+  }
+}
+
+@media only screen and (max-width:446px){
+  .contenedor-cover .svg .Logo {
+    width: 230px;
+  }
+  
+  .contenedor-cover .svg .Logo2 {
+    width: 450px;
+    margin-top: -90px;
+    margin-left: -150px;
+  }
+}
+
+@media only screen and (max-width:425px){
+  .logo-header{
+    width: 65%;
+  }
+  .menu__active{
+    width: 65%;
+  }
+  .logo-header img {
+    width: 70%;
+    margin-top: 1vh;
+  }
+
+  .contenedor-cover .svg .Logo {
+    width: 230px;
+  }
+  
+  .contenedor-cover .svg .Logo2 {
+    width: 450px;
+    margin-top: -90px;
+    margin-left: -150px;
+  }
+  
+
+  /*----------------------------------Quienes somos --------------------------------*/
+  .quienes-somos{
+    justify-content: center;
+    align-content: center;
+    flex-direction: column-reverse;
+    padding-top: 10vh;
+    margin-top: -10vh;
+  }
+
+  .quienes-somos .contenedor-imagen{
+    width: 60%;
+    margin-bottom: -5vh;
+  }
+
+  .quienes-somos .contenedor-texto{
+    width: 100%;
+    font-size: 3vw;
+    
+  }
+
+  .quienes-somos .contenedor-texto .slide_text{
+    padding: 1vw;
+    font-size: 4vw;
+  }
+
+  .slide_text .slogan{
+    font-size: 5vw;
+  }
+
+  .quienes-somos .contenedor-texto .slide_text ul{
+    padding: 5vw;
+  }
+
+
+  /*---------------------------------Slider Servicios------------------------------*/
+  .banner-servicios .contenedor-slides-servicios{
+    width: 60%;
+  }
+  .sliderServices p {
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 5vw;
+  padding: 2vw;
+  border-radius: 10px;
+  }
+  
+  .slide_image {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 80%;
+  border-radius: 10px;
+  padding: 1em;
+  }
+  
+  
+  /*--Whatsapp Servicios----------------------------*/
+  .whatsapp-servicios {
+  margin-top: 4em;
+  
+  }
+  
+  .contenedor-whatsapp-servicios {
+  font-size: 4vw;
+  }
+  
+  .contenedor-whatsapp-servicios:hover>.whatsapp-logo-servicios {
+  width: 19%;
+  }
+  
+  .whatsapp-logo-servicios {
+  width: 50%;
+  }
+  
+  .contenedor-whatsapp-servicios p {
+  padding: 1.5vh 4vw;
+  
+  }
+  
+  .servicios {
+  margin-top: -5%;
+  border-bottom-left-radius: 8%;
+  border-bottom-right-radius: 8%;
+  
+  }
+
+  .banner-servicios{
+    background-position: 24%;
+  }
+
+/*----------------------------SERVICIOS------------------------------------------------------------------------------------------*/
+  .servicios{
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+  }
+ .contenedor-servicios{
+  flex-direction: column-reverse;
+ }
+
+ .contenedor-servicios:nth-child(2){
+  flex-direction: column;
+ }
+
+ .contenedor-servicios .imagen-servicio{
+  width: 100%;
+ }
+
+ .contenedor-servicios .servicio{
+  width: 100%;
+ }
+
+ .contenedor-servicios .servicio h3{
+  font-size: 5vw;
+ }
+  /*------------------------------PORTAFOLIO-----------------------------------------------------------------------------------*/
+  .contenedor-portafolio{
+    margin-top: -5vh;
+    padding: 15vh 10vw 10vh 10vw;
+  }
+
+  .titulo-portafolio{
+    width: 60%;
+  }
+
+  .contenedor-portafolio p{
+    font-size: 5vw;
+  }
+
+  .logo-portafolio{
+    width: 80%;
+  }
+
+
+ /*----------------------------------------Contacto---------------------------------*/ 
+}
+
+
+@media only screen and (max-width:400px){
+  .banner-servicios{
+    background-position: 23%;
+  }
+}
+
+@media only screen and (max-width:380px){
+  .banner-servicios{
+    background-position: 21%;
+  }
+
+
+}
+
+@media only screen and (max-width:334px){
+  .banner-servicios{
+    background-position: 20%;
+}
+}
+
+@media only screen and (max-width:320px){
+  .contenedor-cover .svg .Logo {
+    width: 200px;
+  }
+  
+  .contenedor-cover .svg .Logo2 {
+    width: 370px;
+    margin-top: -80px;
+    margin-left: -110px;
+  }
+
+  .banner-servicios{
+    background-position: 20%;
+}
+}
+

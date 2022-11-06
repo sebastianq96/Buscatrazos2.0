@@ -1,3 +1,23 @@
+//--------------------------------Menu hamburguesa-------------------------------------------------------------------------------------
+document.querySelector(".bars__menu").addEventListener("click", animateBars);
+
+var line1__bars = document.querySelector(".line1__bars-menu");
+var line2__bars = document.querySelector(".line2__bars-menu");
+var line3__bars = document.querySelector(".line3__bars-menu");
+var container__menu = document.querySelector(".menu");
+var container__header = document.querySelector(".contenedor-header");
+var logo_Header = document.querySelector(".logo-header");
+
+function animateBars(){
+   line1__bars.classList.toggle("activeline1__bars-menu");
+   line2__bars.classList.toggle("activeline2__bars-menu");
+   line3__bars.classList.toggle("activeline3__bars-menu");
+   container__menu.classList.toggle("menu__active");
+   container__header.classList.toggle("contenedor-header-mobile");
+   logo_Header.classList.toggle("logo-header-mobile");
+
+
+}
 
 
 //-------------------------------Active navbar-----------------------------------------------------------------------------------------
@@ -37,9 +57,19 @@ btnPorfolio.classList.remove('selected');
 btnServices.classList.remove('selected');
 btnContact.classList.remove('selected');
 
+if(screen.width<1023){
+  nav.classList.add("navbar-color");
+  console.log("entre a ");
+}
+
 window.addEventListener('scroll', () => {
 
+  console.log("asdasdasdasd"+ screen.width);
+ 
 
+  if(screen.width>1023){
+
+    nav.classList.remove('navbar-color');
 
   if (window.scrollY >= 60) {
     nav.classList.add("navbar-color");
@@ -48,6 +78,8 @@ window.addEventListener('scroll', () => {
     nav.classList.remove('navbar-color');
     logoHeader.style.opacity = '0';
   }
+
+} 
 
 
 
